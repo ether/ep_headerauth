@@ -14,6 +14,9 @@ forced to that header's value.
 
 The headers used by the plugin can be customized.
 
+To use this plugin the `trustProxy` and `requireAuthentication` config items 
+must be set to true, otherwise it won't work as excepted.
+
 ## Configuration
 
 In your `settings.json`:
@@ -22,7 +25,8 @@ In your `settings.json`:
 {
   // ...
   "trustProxy": true,
-  "headerauth": {
+  "requireAuthentication": true,
+  "ep_headerauth": {
     // Defaults to "x-authenticated-user"
     "username_header": "x-authenticated-user",
     // Defaults to "x-authenticated-name"
