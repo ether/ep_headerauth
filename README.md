@@ -15,7 +15,7 @@ forced to that header's value.
 The headers used by the plugin can be customized.
 
 To use this plugin the `trustProxy` and `requireAuthentication` config items 
-must be set to true, otherwise it won't work as excepted.
+must be set to true, otherwise it won't work as expected.
 
 ## Configuration
 
