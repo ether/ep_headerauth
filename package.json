@@ -1,6 +1,6 @@
 {
   "name": "ep_headerauth",
-  "version": "1.1.21",
+  "version": "1.1.22",
   "description": "Etherpad plugin to use a reverse proxy's HTTP headers for authentication.",
   "keywords": [
     "auth",
@@ -19,15 +19,14 @@
     "type": "git",
     "url": "https://github.com/ether/ep_headerauth.git"
   },
-  "dependencies": {},
   "funding": {
     "type": "individual",
     "url": "https://etherpad.org/"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "eslint-config-etherpad": "^4.0.4",
-    "typescript": "^5.4.2"
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "lint": "eslint .",
