@@ -50,8 +50,9 @@ exports.authenticate = (hookName, {req}, cb) => {
   return cb([true]);
 };
 
-exports.handleMessage = async (hookName, {client: {client: {request: {session}}}, message}) => {
+exports.handleMessage = async (hookName, {socket, message}) => {
   logger.debug('handleMessage');
+  const {session} = socket.client.request;
   if (session.user == null) {
     logger.debug('handleMessage: User info missing from session');
     return;
@@ -76,7 +77,7 @@ exports.handleMessage = async (hookName, {client: {client: {request: {session}}}
     return;
   }
   logger.debug(`handleMessage: getting author ID for token ${token}`);
-  const authorId = await authorManager.getAuthor4Token(token);
+  const authorId = await authorManager.getAuthorId(token, session.user);
   logger.debug(`handleMessage: Setting name for ${authorId} to ${displayname}`);
   authorManager.setAuthorName(authorId, displayname);
 };
