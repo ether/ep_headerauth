@@ -15,9 +15,9 @@
 // permissions and limitations under the License.
 
 const authorManager = require('ep_etherpad-lite/node/db/AuthorManager');
-const log4js = require('ep_etherpad-lite/node_modules/log4js');
+const {createLogger} = require('ep_plugin_helpers/logger');
 
-const logger = log4js.getLogger('ep_headerauth');
+const logger = createLogger('ep_headerauth');
 let settings;
 
 exports.authenticate = (hookName, {req}, cb) => {
