@@ -13,7 +13,9 @@ describe(__filename, function () {
     await common.init();
     await new Promise((resolve, reject) => {
       plugin.loadSettings(
-          'loadSettings', {settings: {trustProxy: true, users: {}}}, (err) => err ? reject(err) : resolve());
+          'loadSettings',
+          {settings: {trustProxy: true, users: {}}},
+          (err) => (err ? reject(err) : resolve()));
     });
   });
 
